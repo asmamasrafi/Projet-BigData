@@ -1,4 +1,4 @@
-import { Shield, Activity, Search, BarChart3, Clock, ChevronLeft } from "lucide-react";
+import { Shield, Activity, Search, BarChart3, Clock, ChevronLeft, Globe } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useLocation } from "react-router-dom";
 import {
@@ -20,6 +20,7 @@ const navItems = [
   { title: "IP Analysis", url: "/ip-analysis", icon: Search },
   { title: "Attack Patterns", url: "/patterns", icon: BarChart3 },
   { title: "Threat Timeline", url: "/timeline", icon: Clock },
+  { title: "Attack Map", url: "/map", icon: Globe },
 ];
 
 export function AppSidebar() {
