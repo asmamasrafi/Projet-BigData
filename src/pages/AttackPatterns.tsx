@@ -1,4 +1,4 @@
-import { Database, Code, Key, Zap, Search, Mail, TrendingUp, TrendingDown } from "lucide-react";
+import { Database, Code, Key, Zap, Search, Mail, TrendingUp, TrendingDown, Shield } from "lucide-react";
 import { allEvents, getAttackPatterns } from "@/data/mockData";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 
@@ -82,5 +82,3 @@ export default function AttackPatterns() {
     </div>
   );
 }
-
-import { Shield } from "lucide-react";
