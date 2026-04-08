@@ -3,7 +3,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
+import { DashboardLayout } from "@/components/DashboardLayout";
+import DashboardOverview from "@/pages/DashboardOverview";
+import RealTimeMonitoring from "@/pages/RealTimeMonitoring";
+import IPAnalysis from "@/pages/IPAnalysis";
+import AttackPatterns from "@/pages/AttackPatterns";
+import ThreatTimeline from "@/pages/ThreatTimeline";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -14,11 +19,16 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <DashboardLayout>
+          <Routes>
+            <Route path="/" element={<DashboardOverview />} />
+            <Route path="/realtime" element={<RealTimeMonitoring />} />
+            <Route path="/ip-analysis" element={<IPAnalysis />} />
+            <Route path="/patterns" element={<AttackPatterns />} />
+            <Route path="/timeline" element={<ThreatTimeline />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </DashboardLayout>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
