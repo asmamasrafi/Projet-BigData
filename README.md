@@ -1,11 +1,14 @@
 // hadi bax thzi dak fichier t7tih f continer
+
 hdfs dfs -mkdir -p /logs/year=2023/month=10/day=15/
 docker cp cybersecurity_threat_detection_logs.csv namenode:/tmp/
 
 //daroori diri 
 mvn clean project
+
 //moraha rathzi dak jar li tkrya lik f dossier target
 docker cp target/batch-analysis-1.0-SNAPSHOT.jar namenode:/opt/
+
 //mohim ana 3ndi spark f namenod xofi wax tanti wla 3ndk f hadoop-master
 docker exec -it namenode bash
 
